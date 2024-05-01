@@ -3,6 +3,7 @@ const JWTService = require('../services/jwtService');
 
 //register
 const createUser = async (req, res) => {
+  console.log('req.body', req.body);
   try {
     const { name, email, password, confirmPassword, phone } = req.body;
     const reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
